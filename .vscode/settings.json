@@ -1,0 +1,18 @@
+{
+  "i18n-ally.localesPaths": ["public/i18n"],
+  "i18n-ally.displayLanguage": "pt-BR",
+  "i18n-ally.annotationMaxLength": 120,
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.extract.keygenStyle": "snake_case",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "pt-BR",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.rulers": [160],
+  "prettier.printWidth": 160,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}

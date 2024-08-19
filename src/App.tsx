@@ -1,25 +1,18 @@
-import './App.css';
-import * as React from 'react';
-import dayjs, { Dayjs } from 'dayjs';
-import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import CalendarPage from "./components/Calendar/CalendarPage";
+import LoginPage from "./components/Login/LoginPage";
+import RegisterPage from "./components/Register/RegisterPage";
 
 function App() {
-  const [value, setValue] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
-
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={['DateCalendar', 'DateCalendar']}>
-        <DemoItem label="Uncontrolled calendar">
-          <DateCalendar defaultValue={dayjs('2022-04-17')} />
-        </DemoItem>
-        <DemoItem label="Controlled calendar">
-          <DateCalendar value={value} onChange={(newValue) => setValue(newValue)} />
-        </DemoItem>
-      </DemoContainer>
-    </LocalizationProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </Router>
   );
 }
 
