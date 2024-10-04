@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { Input, Link } from "@nextui-org/react";
 import { useState } from "react";
 import Usuario from "../../assets/Usuario.svg";
+import { colors } from "../../config/theme/colors";
 import { cadastrarUsuario } from "../../services/UsuarioService";
 
 export default function RegisterPage() {
@@ -29,11 +30,11 @@ export default function RegisterPage() {
         }}
       >
         <Box sx={{ width: "80%", maxWidth: 400 }}>
-          <Typography variant="h4" fontWeight="540" sx={{ marginBottom: "10px", textAlign: "center", color: "#101828" }}>
+          <Typography variant="h4" fontWeight="540" sx={{ marginBottom: "10px", textAlign: "center", color: colors.black }}>
             Boas vindas ao InOut!
           </Typography>
 
-          <Typography variant="subtitle1" sx={{ marginBottom: "30px", textAlign: "center", color: "#475467" }}>
+          <Typography variant="subtitle1" sx={{ marginBottom: "30px", textAlign: "center", color: colors.grey }}>
             Crie sua conta gratuitamente.
           </Typography>
 
@@ -66,8 +67,8 @@ export default function RegisterPage() {
 
           <Button
             style={{
-              backgroundColor: "#1a1a2e",
-              color: "#fff",
+              backgroundColor: colors.primary,
+              color: colors.white,
               borderRadius: "20px",
               padding: "10px 0",
               marginBottom: "15px",
@@ -79,7 +80,7 @@ export default function RegisterPage() {
           </Button>
 
           <Box sx={{ textAlign: "center", width: "100%" }}>
-            <Typography variant="body2" color={"#475467"}>
+            <Typography variant="body2" color={colors.grey}>
               Já possui uma conta?{" "}
               <Link href="/" underline="hover" color="primary">
                 Entrar

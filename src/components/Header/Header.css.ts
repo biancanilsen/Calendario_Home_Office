@@ -44,7 +44,7 @@ export const SearchInput = styled.input`
   font-family: "Red Hat Display", sans-serif;
   padding: 5px 10px;
   padding-left: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid;
   border-radius: 20px;
   outline: none;
 `;

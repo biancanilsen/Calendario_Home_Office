@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Usuario from "../../assets/Usuario.svg";
 import Google from "../../assets/icons/Google.svg";
+import { colors } from "../../config/theme/colors";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -63,8 +64,8 @@ export default function LoginPage() {
 
           <Button
             style={{
-              backgroundColor: "#1a1a2e",
-              color: "#fff",
+              backgroundColor: colors.primary,
+              color: colors.white,
               borderRadius: "20px",
               padding: "10px 0",
               marginBottom: "15px",
@@ -77,11 +78,12 @@ export default function LoginPage() {
 
           <Button
             style={{
-              backgroundColor: "#f5f5f5",
-              color: "#000",
+              backgroundColor: colors.white,
+              color: colors.black,
               borderRadius: "20px",
               padding: "10px 0",
-              border: "1px solid #ccc",
+              border: "1px solid",
+              borderColor: colors.greyC200,
               marginBottom: "40px",
             }}
             fullWidth

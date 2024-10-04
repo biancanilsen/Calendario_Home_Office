@@ -7,6 +7,7 @@ import "moment/locale/pt-br";
 import * as React from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { colors } from "../../config/theme/colors";
 
 moment.locale("pt-br");
 
@@ -19,7 +20,8 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
+  border: "2px solid",
+  BorderColor: colors.black,
   boxShadow: 24,
   p: 4,
 };

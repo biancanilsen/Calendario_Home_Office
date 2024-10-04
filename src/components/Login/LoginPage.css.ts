@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colors } from "./../../config/theme/colors";
 
 const Button = styled.button`
-  background-color: #4caf50;
+  background-color: ${colors.success};
   border: none;
   color: white;
   padding: 15px 32px;
@@ -14,6 +15,6 @@ const Button = styled.button`
   border-radius: 4px;
 
   &:hover {
-    background-color: #45a049;
+    background-color: ${colors.success};
   }
 `;
