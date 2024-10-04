@@ -5,7 +5,7 @@ const CALENDARIO_SERVICO_URL = window.origin.includes("localhost") ? "http://loc
 
 export const calendarioServicoClient = axios.create({
   baseURL: CALENDARIO_SERVICO_URL,
-  withCredentials: true,
+  withCredentials: false,
   paramsSerializer: (params) => QueryString.stringify(params, { arrayFormat: "repeat" }),
   headers: {
     "X-Dispositivo": "WEB",

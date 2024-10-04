@@ -93,7 +93,7 @@ export default function LoginPage() {
           <Box sx={{ textAlign: "center", width: "100%" }}>
             <Typography variant="body2">
               Não possui uma conta?{" "}
-              <Link href="#" underline="hover" color="primary">
+              <Link href="/register" underline="hover" color="primary">
                 Criar conta
               </Link>
             </Typography>

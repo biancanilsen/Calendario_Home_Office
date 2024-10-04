@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { Input, Link } from "@nextui-org/react";
 import { useState } from "react";
 import Usuario from "../../assets/Usuario.svg";
+import { cadastrarUsuario } from "../../services/UsuarioService";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ export default function RegisterPage() {
   const [squad, setSquad] = useState("");
 
   const handleRegister = () => {
-    console.log("Cadastro efetuado:", { username, email, password });
+    cadastrarUsuario(username, email, password);
   };
 
   return (
@@ -41,7 +42,7 @@ export default function RegisterPage() {
           </Box>
 
           <Box sx={{ marginBottom: "30px" }}>
-            <Input label="E-mail corporativo" placeholder="Digite sua e-mail" fullWidth onChange={(e) => setEmail(e.target.value)} value={password} required />
+            <Input label="E-mail corporativo" placeholder="Digite sua e-mail" fullWidth onChange={(e) => setEmail(e.target.value)} value={email} required />
           </Box>
 
           <Box sx={{ marginBottom: "30px" }}>
@@ -54,13 +55,13 @@ export default function RegisterPage() {
               placeholder="Informe o nome de sua empresa"
               fullWidth
               onChange={(e) => setEmpresa(e.target.value)}
-              value={password}
+              value={empresa}
               required
             />
           </Box>
 
           <Box sx={{ marginBottom: "30px" }}>
-            <Input label="Squad" placeholder="Selecione sua squad" fullWidth onChange={(e) => setSquad(e.target.value)} value={password} required />
+            <Input label="Squad" placeholder="Selecione sua squad" fullWidth onChange={(e) => setSquad(e.target.value)} value={squad} required />
           </Box>
 
           <Button
@@ -72,6 +73,7 @@ export default function RegisterPage() {
               marginBottom: "15px",
             }}
             fullWidth
+            onClick={handleRegister}
           >
             Criar conta
           </Button>
