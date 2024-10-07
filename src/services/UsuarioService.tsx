@@ -1,11 +1,16 @@
 import { calendarioServicoClient } from "../config/api/http-client";
 
 // implementar no backend o login
-export const login = async (email: string, password: string) => {
-  const response = await calendarioServicoClient.post("/login", {
+export const login = async (email: string, senha: string) => {
+  const response = await calendarioServicoClient.post("/api/usuarios/login", {
     email,
-    password,
+    senha,
   });
+  return response.data;
+};
+
+export const isEmailCadastradoPreviamente = async (email: string) => {
+  const response = await calendarioServicoClient.get("/api/usuarios/login-google", { params: { email } });
   return response.data;
 };
 
@@ -16,7 +21,6 @@ export const logout = async () => {
 };
 
 export const cadastrarUsuario = async (nome: string, email: string, senha: string) => {
-  // try catch?
   const response = await calendarioServicoClient.post("/api/usuarios/register", {
     nome,
     email,
