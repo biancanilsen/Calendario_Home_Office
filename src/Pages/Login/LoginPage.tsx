@@ -3,8 +3,8 @@ import { Button, Input, Link } from "@nextui-org/react";
 import { useState } from "react";
 import Usuario from "../../assets/Usuario.svg";
 import Google from "../../assets/icons/Google.svg";
+import Toast from "../../components/Toast/Toast";
 import { colors } from "../../config/theme/colors";
-import Toast from "../Toast/Toast";
 import { useGoogleAuth } from "./useGoogleAuth";
 import { useLoginPage } from "./useLoginPage";
 
@@ -91,7 +91,7 @@ export default function LoginPage() {
           </Box>
 
           <Box sx={{ textAlign: "right", width: "100%", marginBottom: "15px" }}>
-            <Link href="#" underline="hover" color="secondary">
+            <Link href="/esqueceu-senha" underline="hover" color="secondary">
               Esqueceu sua senha?
             </Link>
           </Box>
@@ -100,7 +100,7 @@ export default function LoginPage() {
             style={{
               backgroundColor: colors.primary,
               color: colors.white,
-              borderRadius: "20px",
+              borderRadius: "10px",
               padding: "10px 0",
               marginBottom: "15px",
             }}
@@ -114,7 +114,7 @@ export default function LoginPage() {
             style={{
               backgroundColor: colors.white,
               color: colors.black,
-              borderRadius: "20px",
+              borderRadius: "10px",
               padding: "10px 0",
               border: "1px solid",
               borderColor: colors.greyC200,

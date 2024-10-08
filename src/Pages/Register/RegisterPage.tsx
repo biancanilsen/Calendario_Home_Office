@@ -3,8 +3,8 @@ import { Button, Input, Link } from "@nextui-org/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Usuario from "../../assets/Usuario.svg";
+import Toast from "../../components/Toast/Toast";
 import { colors } from "../../config/theme/colors";
-import Toast from "../Toast/Toast";
 import { useRegister } from "./useRegister";
 
 type ToastType = "success" | "error";
@@ -143,7 +143,7 @@ export default function RegisterPage() {
             style={{
               backgroundColor: colors.primary,
               color: colors.white,
-              borderRadius: "20px",
+              borderRadius: "10px",
               padding: "10px 0",
               marginBottom: "15px",
             }}

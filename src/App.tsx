@@ -1,8 +1,9 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import CalendarPage from "./components/Calendar/CalendarPage";
-import LoginPage from "./components/Login/LoginPage";
-import RegisterPage from "./components/Register/RegisterPage";
+import EsqueceuSenhaPage from "./Pages/EsqueceuSenha/EsqueceuSenhaPage";
+import LoginPage from "./Pages/Login/LoginPage";
+import RegisterPage from "./Pages/Register/RegisterPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/esqueceu-senha" element={<EsqueceuSenhaPage />} />
       </Routes>
     </Router>
   );
